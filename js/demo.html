@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>#res{width:100%;background-color: blue;}
+    h1{color:red;}
+    .par{font-weight: 900;}
+    </style>
+</head>
+<body>
+    <h1>demo</h1>
+    <div id="res"></div>
+    <p class="par">Par1</p>
+    <p class="par">Par1</p>
+    <p class="" >Par1</p>
+
+    <script>
+    let res = document.getElementById("res");
+    console.log(res);
+    res.innerText = "bonjour";
+    res.style.backgroundColor="#00ff00";
+    res.addEventListener("click", function (){
+        alert(res.innerText);
+        }
+        )
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>PGrid Demo</title>
+<meta name="description" content="Demo grid">
+<script src="kfGrid.js"></script>
+<script src="batiment.js"></script>
+</head>
+<body>
+<!-- Content -->
+<div id="container" style="background-color:#259925;">
+</div>
+
+
+<script>
+let allotment = ["maison.png","house.png", "house2.png", "hopital.png"];
+let obj = [new Maison("2 rue de la pie", 3),new Maison("5 rue de la pie", 5), new Hopital("3 rue de la pie", 3), new Caserne("4 rue de la pie", 3), new Immeuble("8 rue de la pie", 8)];
+
+var row=8, col=8;
+myGrid = new kfGrid("container",row,col);
+var nb=-1;
+for(let i=0; i<row; i++){
+for(let j=0;j<col;j++){
+nb++;
+console.log(nb);
+myGrid.addImage(nb,allotment[Math.floor(Math.random() * 3)]) ;
+//myGrid.addObject(nb,obj[Math.floor(Math.random() * 4)].getImage());
+}
+}
+
+</script>
+</body>
+</html>

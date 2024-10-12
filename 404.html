@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Erreur 404 : Page non trouv�e</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: sans-serif;
+      background-color: #f0f0f0;
+    }
+    h1 {
+      font-size: 3em;
+      color: #cc0000;
+    }
+    img {
+      margin-top: 2em;
+      width: 25%;
+    }
+    p{
+    font-size: 1.5em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Erreur 404 : Page non trouv�e</h1>
+  <p id="phrase">D�sol�, la page que vous cherchez est introuvable.</p>
+  <img src="https://i.imgur.com/z8p10lZ.jpg" alt="Image de chat triste">
+  
+  <script>
+  const phrases = [
+  "Oups, il semblerait que nous ayons perdu cette page quelque part ! D�sol� pour le d�sagr�ment.",
+  "Cherchez-vous la page que vous avez perdue ou la page que nous avons perdue ? Dans les deux cas, nous sommes d�sol�s !",
+  "La page que vous cherchez est partie en vacances. Elle reviendra bient�t, promis !",
+  "La page que vous cherchez a dû s'échapper ! Nous la retrouverons et la ram�nerons saine et sauve.",
+  "La page que vous cherchez a dû prendre un raccourci. Nous travaillons actuellement � la retrouver.",
+  "La page que vous cherchez a dû se cacher. Nous sommes sur ses traces et nous la retrouverons bient�t.",
+  "La page que vous cherchez a dû se transformer en grenouille. Nous sommes � sa recherche et nous la ram�nerons bient�t � la maison.",
+  "La page que vous cherchez a dû devenir invisible. Ne vous inqui�tez pas, nous lui mettrons un collier pour qu'elle ne se perde plus !"
+];
+
+// G�n�re un nombre al�atoire entre 0 et 1
+const randomNumber = Math.random();
+
+// Calcule l'index de la phrase � afficher en fonction du nombre al�atoire
+const phraseIndex = Math.floor(randomNumber * phrases.length);
+
+// R�cup�re la phrase � afficher � l'aide de l'index calcul�
+const phrase = phrases[phraseIndex];
+
+// Affiche la phrase dans la page
+document.getElementById("phrase").innerHTML =phrase;
+
+  </script>
+</body>
+</html>

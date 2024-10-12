@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#ip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.ip-address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.square {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.ip-address .address {
+    font-weight: bold;
+}
+
+.ip-address .status {
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.ip-address .status.online {
+    background-color: #4CAF50; /* Vert */
+    color: #fff;
+}
+
+.ip-address .status.offline {
+    background-color: #f44336; /* Rouge */
+    color: #fff;
+}

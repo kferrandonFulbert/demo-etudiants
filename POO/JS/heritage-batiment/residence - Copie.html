@@ -1,0 +1,41 @@
+<html>
+    <head>
+	<title>TP Batiment POO JS</title>     
+    </head>
+    <body>    
+    <div id="residence"> 
+    </div>  
+        <script>
+            window.onload = function () {
+                m1 =  new Maison("1 rue de Chine", 6);
+                m1.aff("residence");
+            var Ville = [
+            new Maison("1 rue de Chine", 6),
+            new Hopital("2 rue de Chine", 8),
+            new Maison("1 rue de Chine", 6),
+             new Maison("1 rue de Chine", 6), 
+            new Immeuble("3 rue de Chine", 8)
+            ];
+            for(var i = 0; i < Ville.length; i++){
+            	let batiment = Ville[i];
+            	//batiment.affiche();
+                batiment.aff("residence");
+            //	var unBat = document.getElementById(batiment.getId());
+            	/*unBat.onload = function () {
+                	this.onclick = function () {
+                    	batiment.affAdresse();
+                	};
+           		};*/
+           	} 
+        /*   	function fun(item){
+           		var a = item;
+           		a.affiche();
+           	}
+           	Ville.foreach(fun(), index);
+*/
+        };
+        </script>
+
+        <script src="batiment.js"></script>
+    </body>
+</html>

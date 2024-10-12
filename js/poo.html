@@ -1,0 +1,28 @@
+<script>
+    class Animal{
+        _nom;
+        constructor(nom){
+            this._nom = nom;
+        }
+        set Nom(nom){
+            this._nom = nom;
+        }
+        get Nom(){
+            return this._nom;
+        }
+        parler(){
+            console.log(`${this._nom} fait du bruit`);
+        }
+    }
+    class Chat extends Animal{
+        constructor(nom){
+            super(nom);
+        }
+        parler(){
+            console.log(`${this._nom} miole`);
+        }
+    }
+
+    let tom = new Chat('Tom');
+    tom.parler();
+</script>
